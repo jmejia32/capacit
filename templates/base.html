@@ -1,0 +1,132 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sistema de Registro de Capacitaciones</title>
+	<meta charset="utf8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'sbamin/bower_components/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'sbamin/bower_components/metisMenu/dist/metisMenu.min.css' %}" rel="stylesheet">
+    <link href="{% static 'sbamin/dist/css/timeline.css' %}" rel="stylesheet">
+    <link href="{% static 'sbamin/dist/css/sb-admin-2.css' %}" rel="stylesheet">
+    <link href="{% static 'sbamin/bower_components/morrisjs/morris.css' %}" rel="stylesheet">
+    <link href="{% static 'sbamin/bower_components/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="">Sistema de Registro de Capacitaciones</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <a href="#" title="Proyecto en GitHub">
+                        <i class="fa fa-git fa-fw"></i>
+                    </a>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="admin"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="#"><i class="fa fa-book fa-fw"></i>Capacitaciones<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="capacit/agregar">Agregar</a>
+                                </li>
+                                <li>
+                                    <a href="capacit/eliminar">Eliminar</a>
+                                </li>
+                                <li>
+                                    <a href="capacit/modificar">Modificar</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-gears fa-fw"></i>Trabajadores<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Agregar</a>
+                                </li>
+                                <li>
+                                    <a href="#">Eliminar</a>
+                                </li>
+                                <li>
+                                    <a href="#">Modificar</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                        	<a href="#"><i class="fa fa-search fa-fw"></i>Consultas<span class="fa arrow"></span></a>
+                        	<ul class="nav nav-second-level">
+                        		<li>
+                        			<a href="#">Trabajadores que realizaron capacitaciones</a>
+                        		</li>
+                        		<li>
+                        			<a href="#">Trabajadores que no han realizado capacitaciones</a>
+                        		</li>
+                        	</ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+        <div id="page-wrapper">
+        	<div class="container-fluid">
+        		<div class="row">
+        			<div class="col-lg-12">
+        				{% block todo %}
+        				{% endblock %}
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    <!-- jQuery -->
+    <script src="{% static 'sbamin/bower_components/jquery/dist/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'sbamin/bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="{% static 'sbamin/bower_components/metisMenu/dist/metisMenu.min.js' %}"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="{% static 'sbamin/bower_components/raphael/raphael-min.js' %}"></script>
+    <script src="{% static 'sbamin/bower_components/morrisjs/morris.min.js' %}"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static 'sbamin/dist/js/sb-admin-2.js' %}"></script>
+</div>
+</body>
+</html>
