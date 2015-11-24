@@ -52,6 +52,6 @@ class AsignacionForm(ModelForm):
 			'idCapacit':'Seleccione una Capacitación'
 		}
 		widgets = {
-			'idTrab': forms.Select(attrs={'class': 'form-control'})
+			'idTrab': forms.Select(attrs={'class': 'form-control'}),
 			'idCapacit': forms.Select(attrs={'class': 'form-control'})
 		}

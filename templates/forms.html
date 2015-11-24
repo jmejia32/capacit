@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block todo %}
+<h1 class="page-header">{% block tform %}{% endblock %}</h1>
+<div class="panel panel-default">
+	<div class="panel-heading">Complete todos los campos</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-lg-6">
+				<form role="form" method="post">{% csrf_token %}
+					{% for campo in formulario %}
+					<div class="form-group">
+						{{ campo.errors }}
+						{{ campo.label_tag }}
+						{{ campo }}
+					</div>
+					{% endfor %}
+					<input type="submit" class="{% block sbmcls %}{% endblock %}" value="{% block sbmname %}{% endblock %}">
+				</form>
+			</div>
+			<div class="col-lg-6"></div>
+		</div>
+	</div>
+</div>
+{% endblock %}
